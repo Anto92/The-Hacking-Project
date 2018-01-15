@@ -1,4 +1,4 @@
-def find_best_prices(a)
+def trader_du_dimanche(a)
 	best_price = a[1] - a[0]
 
 	for i in (0..a.length)
@@ -13,4 +13,4 @@ def find_best_prices(a)
 	puts "[#{prix_max}, #{prix_min}]"
 end
 
-print find_best_prices([17,3,6,9,15,8,6,1,10])
+print trader_du_dimanche([17,3,6,9,15,8,6,1,10])
