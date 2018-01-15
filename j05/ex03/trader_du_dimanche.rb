@@ -13,5 +13,4 @@ def find_best_prices(a)
 	puts "[#{prix_max}, #{prix_min}]"
 end
 
-a = [17,3,6,9,15,8,6,1,10]
 print find_best_prices([17,3,6,9,15,8,6,1,10])
