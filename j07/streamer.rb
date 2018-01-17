@@ -5,6 +5,7 @@ input_array = ARGV
 
 if input_array.length != 4
   puts "Usage: ruby filename.rb [consumer_key] [consumer_secret] [consumer_token] [consumer_token_secret]"
+  exit
 else
 	twitter_consumer_key = ARGV[0].to_s
 	twitter_consumer_secret = ARGV[1].to_s
