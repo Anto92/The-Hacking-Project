@@ -5,8 +5,8 @@ require 'pry'
 
 PAGE_URL = "http://annuaire-des-mairies.com/val-d-oise.html"
 
-def get_the_email_of_a_townhal_from_its_webpage
-	page = Nokogiri::HTML(open("http://annuaire-des-mairies.com/95/vaureal.html"))
+def get_the_email_of_a_townhal_from_its_webpage(url)
+	page = Nokogiri::HTML(open(url)) # Passer en URL la value du hash de l'autre programme
 
 	links = page.css("tr td p font")
 	links.each do |elem|
@@ -17,20 +17,21 @@ def get_the_email_of_a_townhal_from_its_webpage
 # binding.pry
 end
 
-def get_all_the_urls_of_val_doise_townhalls
-	page = Nokogiri::HTML(open("http://annuaire-des-mairies.com/val-d-oise.html"))
+def get_all_the_urls_of_val_doise_townhalls(url)
+	page = Nokogiri::HTML(open(url))
 	website = Hash.new
-	my_arr = []
+	test_hash = Hash.new
 
 	links = page.css(".lientxt")
 	links.each do |elem|
-		#puts elem.text
-		clean_link = "annuaire-des-mairies.com" + elem['href'][1..-1] 
-		website[elem.text] = clean_link
+		clean_link = "http://annuaire-des-mairies.com" + elem['href'][1..-1]
+		test_hash[elem.text] = clean_link
+		website[elem.text] = get_the_email_of_a_townhal_from_its_webpage(clean_link)	
 	end
-	puts website # Uncomment ca pour display le Hash
+	# puts test_hash # Uncomment ca pour display le Hash
 end
-get_all_the_urls_of_val_doise_townhalls
 
-# get_the_email_of_a_townhal_from_its_webpage
+get_all_the_urls_of_val_doise_townhalls(PAGE_URL)
+
+#get_the_email_of_a_townhal_from_its_webpage(PAGE_URL)
 
