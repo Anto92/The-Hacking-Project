@@ -21,10 +21,9 @@ def crypto_trader
 	end
 
 	size = crypto_names.length
-	# puts size
 
 	while i < size do
-		my_hash = {crypto_names[i] => crypto_price[i]}
+		my_hash[crypto_names[i]] = crypto_price[i]
 		i += 1
 	end
 	puts my_hash
