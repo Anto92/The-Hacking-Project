@@ -22,7 +22,8 @@ def get_all_the_urls_of_val_doise_townhalls
 
 	links = page.css(".lientxt")
 	links.each do |link|
-		puts "annuaire-des-mairies.com" + link['href']
+		clean_link = link['href'][1..-1] 
+		puts "annuaire-des-mairies.com" + clean_link
 	end
 end
 
