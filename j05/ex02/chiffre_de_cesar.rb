@@ -1,6 +1,4 @@
 def chiffre_de_cesar(str, key)
-	@str = str
-	@key = key
 	array = str.chars
 	
 	array.each do |curr_char|
@@ -15,4 +13,3 @@ def chiffre_de_cesar(str, key)
 end
 
 chiffre_de_cesar("ABC abc xyz XYZ 123 éé", 5)
-
