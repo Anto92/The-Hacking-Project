@@ -1,0 +1,13 @@
+<%= form_for @user, url: {action: "update"} do |f| %>
+  Username: <%= f.text_field :username %>
+  Email: <%= f.email_field :email %>
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Update" %>
+<% end %>
+
+</br>
+
+<%= link_to 'Clique pour détruire', @user, method: :delete, data: {confirm: "Confirmer suppression?"} %> 
+</br>
+<%= link_to 'Retour vers tous les users', users_path %>

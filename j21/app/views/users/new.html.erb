@@ -1,0 +1,12 @@
+<%= form_for @user, url: {action: "create"} do |f| %>
+  Username: <%= f.text_field :username %>
+  Email: <%= f.email_field :email %>
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Create account" %>
+<% end %>
+
+</br>
+</br>
+</br>
+<%= link_to 'Retour vers tous les users', users_path %>
