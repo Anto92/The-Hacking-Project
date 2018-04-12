@@ -1,0 +1,5 @@
+<%= form_tag("/movies") do %>
+  <%= label_tag(:content, "Quel film cherches tu ?") %>
+  <%= text_field_tag(:content) %>
+  <%= submit_tag("Trouver !") %>
+<% end %>
