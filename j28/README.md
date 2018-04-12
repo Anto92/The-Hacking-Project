@@ -16,4 +16,4 @@ My copy : https://copycat-landing-pages.herokuapp.com/home/checkr
 
 Original page : https://flynn.io
 
-Flynn : https://copycat-landing-pages.herokuapp.com/home/flynn
+My copy : https://copycat-landing-pages.herokuapp.com/home/flynn
