@@ -1,0 +1,52 @@
+/* line 1, /Users/antoninsiguier/Desktop/landing-pages/app/assets/stylesheets/flynn.scss */
+body {
+  font-family: "League Spartan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 8, /Users/antoninsiguier/Desktop/landing-pages/app/assets/stylesheets/flynn.scss */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17.6px;
+}
+
+/* line 14, /Users/antoninsiguier/Desktop/landing-pages/app/assets/stylesheets/flynn.scss */
+.top-left-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 7%;
+  height: 80px;
+  align-items: center;
+}
+/* line 21, /Users/antoninsiguier/Desktop/landing-pages/app/assets/stylesheets/flynn.scss */
+.top-left-header a {
+  padding-left: 20px;
+  color: #1bb45e;
+  text-decoration: none;
+}
+
+/* line 28, /Users/antoninsiguier/Desktop/landing-pages/app/assets/stylesheets/flynn.scss */
+.top-right-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 7%;
+  height: 80px;
+}
+/* line 34, /Users/antoninsiguier/Desktop/landing-pages/app/assets/stylesheets/flynn.scss */
+.top-right-header a {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #1bb45e;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+  padding-top: 25px;
+}
+/* line 43, /Users/antoninsiguier/Desktop/landing-pages/app/assets/stylesheets/flynn.scss */
+.top-right-header a:hover {
+  color: #FFFFFF;
+  background-color: grey;
+}
