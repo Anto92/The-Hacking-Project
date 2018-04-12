@@ -1,0 +1,99 @@
+<h1> <%= @user.name %>'s Page </h1>
+
+</br>
+
+<h3> Username : <%= @user.name %></h3>
+<h3> Mail : <%= @user.email %></h3>
+
+</br>
+
+<div>
+      <h1>
+        Events created by <%= @user.name %>
+      </h1>
+<table class="table table-striped table-hover">
+    <tbody>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Place</th>
+        <th>Link to show </th>
+    </tr>
+    <% i = 0 %>
+    <% @user.authored_events.each do |event|%>
+    <tr>
+        <td> <%= @user.authored_events[i]['name'] %> </td>
+        <td> <%= @user.authored_events[i]['description'] %> </td>
+        <td> <%= @user.authored_events[i]['date'] %>  </td>
+        <td> <%= @user.authored_events[i]['place'] %> </td>
+        <td> <%= link_to "Show event", test_path(event) %> </td>
+        <% i = i + 1 %>
+    </tr>
+    <% end %>
+    </tbody>
+</table>
+</div>
+
+<div class="center">
+  <%= link_to "New event", events_new_path, class: "btn btn-lg btn-info" %>
+</div> </br></br>
+
+<div>
+      <h1>
+       <%= @user.name %>'s upcomming events
+      </h1>
+<table class="table table-striped table-hover">
+    <tbody>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Place</th>
+        <th>Link to show </th>
+        <th>Unattend </th>
+    </tr>
+    <% @user.attended_events.each do |event|%>
+        <% if event.date > Time.now %>
+        <tr>
+            <td> <%= event.name %> </td>
+            <td> <%= event.description %> </td>
+            <td> <%= event.date %>  </td>
+            <td> <%= event.place %> </td>
+            <td> <%= link_to "Show event", test_path(event) %> </td>
+              <td> <%= button_to "Unattend the event", unregister_path %> </td>
+        </tr>
+        <% end %>
+       <% end %>
+    </tbody>
+</table>
+</div>
+
+
+<div>
+      <h1>
+       <%= @user.name %>'s past events
+      </h1>
+<table class="table table-striped table-hover">
+    <tbody>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Place</th>
+        <th>Link to show </th>
+    </tr>
+    <% @user.attended_events.each do |event|%>
+    <% if event.date < Time.now %>
+      <tr>
+          <td> <%= event.name %> </td>
+          <td> <%= event.description %> </td>
+          <td> <%= event.date %>  </td>
+          <td> <%= event.place %> </td>
+          <td> <%= link_to "Show event", test_path(event) %> </td>
+      </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+</table>
+</div>

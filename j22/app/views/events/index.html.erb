@@ -1,0 +1,35 @@
+<h1>All Events</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Event's Name</th> 
+      <th>Date</th> 
+      <th>Place</th> 
+      <th>Show event</th> 
+        <% if logged_in? %>
+            <th>Attend this event</th> 
+        <% end %>      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td> 
+        <td><%= event.date %></td> 
+        <td><%= event.place %></td> 
+        <td><%= link_to 'Show event', test_path(event) %></td>
+        <% if logged_in? %>
+            <% if event.attendees.include?(current_user) %>
+                <td> Attending </td>
+            <% else %>
+            	<td> <%= button_to "Attend the event", register_path(event) %> </td>
+            <% end %>
+        <% end %>  
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p> <%= link_to "New Event", events_new_path %> </p>
