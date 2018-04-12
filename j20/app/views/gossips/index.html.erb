@@ -1,0 +1,27 @@
+<h1>Gossips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Anon Author</th>
+      <th>Gossip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gossips.each do |goss| %>
+      <tr>
+        <td><%= goss.anonymous_author %></td>
+        <td><%= goss.content %></td>
+        <td><%= link_to 'Afficher', gossip_path(goss)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</br>
+</br>
+</br>
+
+<p>Balance ton gossip ici : <%= link_to "balance tout", new_gossip_path %> </p>

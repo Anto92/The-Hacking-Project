@@ -1,0 +1,5 @@
+<%= form_for @gossip, url: {action: "create"} do |f| %>
+  Anon name: <%= f.text_field :anonymous_author %>
+  Gossip: <%= f.text_area :content %>
+  <%= f.submit "Create" %>
+<% end %>
