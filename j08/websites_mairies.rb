@@ -28,3 +28,4 @@ def get_all_the_urls_of_val_doise_townhalls(url)
     return table     
 end
 get_all_the_urls_of_val_doise_townhalls(PAGE_URL)
+
