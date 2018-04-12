@@ -1,0 +1,28 @@
+<% if logged_in? %>
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Afficher', user_path(user)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<% else %>
+<p> You must be logged in to see this page </p>
+<% end %>

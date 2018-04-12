@@ -1,0 +1,13 @@
+<h1> Bienvenue <%= @user.first_name %> </h1>
+
+</br>
+
+<td> Ton prénom est : <%= @user.first_name %></td> </br>
+<td> Ton nom est : <%= @user.last_name %></td> </br>
+<td> Ton mail est : <%= @user.email %></td>
+
+</br>
+</br>
+
+<p> Edite ou supprime ton compte <%= link_to "Edit/Delete", edit_user_path %> </p>
+<p> Retour a l'index : <%= link_to "Index", users_path %> </p>
