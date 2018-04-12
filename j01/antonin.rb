@@ -1,1 +1,1 @@
-puts "Antonin"
+puts 'Antonin'
