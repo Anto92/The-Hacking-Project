@@ -1,13 +1,7 @@
 # README
 
-As I can only have 5 Heroku apps running simultaneously, I don't have a production version for this project anymore, but you can check out the app locally by following these simple steps: 
+This minimalistic web app shows the user a form. The text that is submited throught the form is then twitted from my account !
 
-1) Clone the repo
+App : https://twitter-form.herokuapp.com
 
-2) run ```bundle install --without production```
-
-3) run ```rails db:migrate```
-
-4) Lauch a server with the command ```rails server```
-
-5) Go to http://localhost:3000 in your browser
+My Twitter account : https://twitter.com/ThpRuby
