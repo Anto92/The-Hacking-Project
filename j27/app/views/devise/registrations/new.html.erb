@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link stylesheet_link_tag "main.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  </head>
+
+<body id="blurry-bg">
+
+  <div class="full-signup">
+  <div class="left-signup">
+    <h1>uniform</h1>
+    <h2>The best form website</h2>
+  </br></br></br></br></br></br></br></br></br></br></br></br>
+    <div class="picto">
+        <%= link_to image_tag("fb.png"), "https://www.facebook.com/thehackingproject/", :target => "_blank" %>
+        <p> Suivez nous sur Facebook ! </p>
+      </div>
+
+      <div class="picto">
+        <%= link_to image_tag("twitter.png"), "https://twitter.com/the_hacking_pro", :target => "_blank" %>
+        <p> Suivez nous sur Twitter ! </p>
+      </div>
+
+      <div class="picto">
+        <%= link_to image_tag("linkedin.png"), "https://www.linkedin.com/school/11128955/", :target => "_blank" %>
+        <p> Suivez nous sur Linkedin ! </p>
+      </div>
+  </div> 
+  <div class="right-signup">
+<div class="top-right-signup">
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="text-above">
+    <p>Entrez vos identifiants</p>
+  </div>
+
+  <div class="field">
+    <p class="user-info"> <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Your email" %> </p>
+  </div>
+
+  <div class="field">
+    <p class="user-info"> <%= f.password_field :password, autocomplete: "off", placeholder:"Your password"%> </p>
+  </div>
+
+  <div class="field">
+   <p class="user-info"> <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirm your password" %> </p>
+  </div>
+
+  <div class="field">
+    <%= f.submit "Sign up", class: "submit-button" %>
+  </div>
+<% end %>
+
+  <div class="text-under">
+    <p> <%= link_to "Mot de passe oublié ?", edit_user_password_path, class: 'link-to-forgot-pass' %> </p>
+  </div>
+
+<%= render "devise/shared/links" %>
+  </div>
+
+    <div class="account-creation">
+      <%= link_to "Créer un compte", new_user_registration_path, class: 'link-to-text-color' %>
+  </div>
+</div>
+</div>
+</body>

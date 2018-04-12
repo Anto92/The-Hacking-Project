@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+
+<body id="blurry-bg">
+
+  <div class="full-signup-logged">
+  <div class="left-signup">
+    <h1>Merci de t'être inscrit <%= @user.email %> </h1>
+    <h2>The best form website</h2>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+</div>
+</div>
+</body>
+
+<% else %>
+	
+<div class="full-signup-logged">
+  <div class="left-signup">
+	<h1>Connecte-toi ou inscris-toi !</h1>
+	<%= link_to "Sign In", new_user_session_path %>
+	<%= link_to "Sign Up", new_user_registration_path %>
+</div>
+</div>
+</body>
+
+<% end %>

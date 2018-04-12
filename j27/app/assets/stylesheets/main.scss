@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+	background: asset-data-url('background.jpg');
+}
+
+#blurry-bg {
+	background: asset-data-url('blurred-background.jpg');
+}
+
+.full-signup {
+	display: flex;
+	flex-direction: row;
+	font-family: 'Source Sans Pro', sans-serif;
+	opacity: 0.95;
+	width:60%;
+	height:70%;
+	padding-left: 250px;
+	padding-bottom: 100px;
+	padding-top: 100px;
+}
+
+.full-signup-logged {
+	display: flex;
+	flex-direction: row;
+	font-family: 'Source Sans Pro', sans-serif;
+	opacity: 0.95;
+	width:150%;
+	height:70%;
+	padding-left: 100px;
+	padding-bottom: 100px;
+	padding-top: 100px;
+}
+
+.right-signup  {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.top-right-signup {
+	padding-top: 20%;
+	background-color: #FFFFFF;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 75vh;
+}
+
+.account-creation {
+	background-color: #ACACBC;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 25vh;
+}
+
+.link-to-text-color {
+	color: #FFFFFF;
+	text-decoration:none;
+}
+
+.link-to-forgot-pass {
+	color: #ACACBC;
+	text-decoration:none;	
+}
+
+.left-signup {
+	background-color: #4494E4;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	flex: 0 0 55%;
+}
+
+h1 {
+	width: 100%;
+	padding-top: 7%;
+	color: #FFFFFF;
+	position: absolute;
+    text-align: center;
+    padding-right: 150px;
+    font-size: 55px;
+}
+
+h2 {
+	width: 100%;
+	padding-top: 14%;
+	color: #FFFFFF;
+	position: absolute;
+    text-align: center;
+    padding-right: 130px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.picto {
+	display: flex;
+	align-items: center;
+}
+
+.submit-button {
+	width: 280px;
+	background-color: #4494E4;
+	margin-top: 15px;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+.field {
+	z-index: +1; position:relative;
+}
+
+input {
+	width: 280px;
+	height: 30px;
+}
+
