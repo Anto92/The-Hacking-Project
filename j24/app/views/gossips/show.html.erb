@@ -1,0 +1,35 @@
+<% if logged_in? %>
+
+<h1>Gossip</h1>
+
+</br>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th> Anonymous Author </th>
+      <th> Gossip </th>
+      <th> Date of creation </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <tr>
+        <td><%= @gossip.mousaillon.username %></td>
+        <td><%= @gossip.content %></td>
+        <td><%= @gossip.created_at %></td>
+      </tr>
+  </tbody>
+</table>
+
+</br>
+</br>
+</br>
+
+<%= link_to 'Edit Gossip', edit_gossip_path %>
+<%= link_to 'All Gossips', gossips_path %>
+
+<% else %>
+<p> You must be logged in to see this page </p>
+<% end %>

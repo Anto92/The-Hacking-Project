@@ -1,0 +1,36 @@
+<% if logged_in? %>
+
+<h1 align="center">Gossips</h1>
+
+</br>
+</br>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Anonymous Author</th>
+      <th>Gossip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gossips.each do |goss| %>
+      <tr>
+        <td><%= goss.mousaillon.username %></td>
+        <td><%= goss.content %></td>
+        <td><%= link_to 'Afficher', gossip_path(goss)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</br>
+</br>
+</br>
+
+<p>Balance ton gossip ici : <%= link_to "balance tout", new_gossip_path %> </p>
+
+<% else %>
+<p> You must be logged in to see this page </p>
+<% end %>

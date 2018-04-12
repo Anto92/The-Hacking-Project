@@ -1,0 +1,15 @@
+<% if logged_in? %>
+
+<%= form_for @gossip, url: {action: "update"} do |f| %>
+  Gossip: <%= f.text_area :content %>
+  <%= f.submit "Update" %>
+<% end %>
+
+</br>
+
+<%= link_to 'Clique pour détruire', @gossip, method: :delete %> 
+<%= link_to 'All Gossips', gossips_path %>
+
+<% else %>
+<p> You must be logged in to see this page </p>
+<% end %>
