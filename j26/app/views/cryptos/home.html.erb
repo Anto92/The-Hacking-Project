@@ -1,0 +1,9 @@
+<%= form_tag do %>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <p> <%= label_tag 'crypto', "Choose your crypto-currency"  %> </p>
+                <p> <%= select_tag 'crypto', options_for_select(@crypto_names.collect{|x| x})%> </p>
+                <p> <%= submit_tag "View crypto's price", class: "btn btn-primary" %></p>
+            </div>
+        </div>
+<% end %>
