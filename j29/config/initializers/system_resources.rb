@@ -1,0 +1,1 @@
+thr = Thread.new { TwitterBot.new('formation competences formation-dev ruby rails').perform }
