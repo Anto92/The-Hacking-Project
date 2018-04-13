@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="container-match-index">
+        <%= link_to users_show_path do %><i class="material-icons">arrow_back</i><% end %>
+        <h1> Mes views </h1>
+    </div>
+
+    <!-- Tab links -->
+    <div class="tab-nav">
+        <button class="tablinks btn-matchmaker tab-nav-active">
+            <i class="material-icons">person</i><i class="material-icons">keyboard_arrow_right</i><i class="material-icons">people_outline</i>
+        </button>
+        <button class="tablinks btn-selected">
+            <i class="material-icons">person_outline</i><i class="material-icons">keyboard_arrow_left</i><i class="material-icons">people</i>
+        </button>
+    </div>
+
+    <!-- Tab content -->
+    <!-- Tab as-matchmaker -->
+    <div id="as-matchmaker" class="tabcontent tab-active">
+    <% @matches.each do |m| %>
+        <%= link_to match_show_path(:id => m.id) do %>
+        <div class="match-div">
+            <div class="match-div-1">
+              <div class="selected-name"><%= User.find(m.user_ids.first).firstname %></div>
+              <div class="match-div-img"><%= image_tag User.find(m.user_ids.first).avatar.url(:thumb) %></div>
+            </div>
+
+            <div class="match-div-2">
+              <div class="match-div-img"><%= image_tag current_user.avatar.url(:thumb), class:"image-self" %></div>
+            </div>
+
+            <div class="match-div-3">
+              <div class="selected-name"><%= User.find(m.user_ids.last).firstname %></div>
+              <div class="match-div-img"><%= image_tag User.find(m.user_ids.last).avatar.url(:thumb) %></div>
+            </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <!-- Tab as-selected -->
+    <div id="as-selected" class="tabcontent">
+    <% @as_selected.each do |m| %>
+      <%= link_to match_show_path(:id => m.id) do %>
+        <div class="match-div">
+            <div class="match-div-1">
+              <div class="selected-name"><%= User.find(m.user_ids.first).firstname %></div>
+              <div class="match-div-img"><%= image_tag User.find(m.user_ids.first).avatar.url(:thumb) %></div>
+            </div>
+
+            <div class="match-div-2">
+              <div class="match-div-img"><%= image_tag User.find(m.user_id).avatar.url(:thumb), class:"image-self" %></div>
+            </div>
+
+            <div class="match-div-3">
+              <div class="selected-name"><%= User.find(m.user_ids.last).firstname %></div>
+              <div class="match-div-img"><%= image_tag User.find(m.user_ids.last).avatar.url(:thumb) %></div>
+            </div>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+
+</div>

@@ -1,0 +1,43 @@
+<div class="container container-confirmation">
+    <div class="title-confirmation">
+      It's a match !
+    </div>
+
+    <div class="pictures-confirmation">
+      <div class="pix-layer">
+        <div id="first" class="yellow-circle"></div>
+        <div id="second" class="yellow-circle"></div>
+        <div id="third" class="blue-circle" ></div>
+        <div id="fourth" class="blue-circle" ></div>
+        <div id="fith" class="green-circle" ></div>
+        <div id="sixth" class="green-circle" ></div>
+        <%= image_tag @candidate_1.avatar.url(:thumb), class: "circle-image" %>
+        <%= image_tag @candidate_2.avatar.url(:thumb), class: "circle-image" %>
+
+      </div>
+    
+    </div>
+      <a target="_blank" class="CTA_button"
+        <%= mail_to "#{@candidate_1.email}", "ENVOI D'E-MAIL!", cc: "#{@candidate_2.email}", subject: "#{@candidate_1.firstname} & #{@candidate_2.firstname}, je pense que vous pourriez bien vous entendre ! ", body:"Hello #{@candidate_1.firstname} & #{@candidate_2.firstname}, 
+          \n Je vous ai fait matcher sur Obviews ! Je pense que vous aimeriez vous rencontrer, pour les raisons suivantes :
+          \n \n \n
+          \n A très vite,
+          \n #{@current_user.firstname}
+          \n \n Retrouvez-vous sur www.obviews.com"
+        %>
+      </a>
+
+      <%= link_to "Valide le match", match_path, class: "action-button"%>
+
+    <div class="action_link" style="margin-top: 30px">
+      <%= link_to "Annuler", root_path %>
+    </div>
+</div>
+
+
+
+<!--     <div class="CTA_button">
+          <a href='#'>ENVOIE !</a>
+    </div> -->
+
+

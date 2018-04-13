@@ -1,0 +1,90 @@
+<div class="container-ranking">
+    <div class="container-match-index">
+    <%= link_to users_show_path do %><i class="material-icons">chevron_left</i><% end %>
+      <h1> Captains Obviews </h1>
+    </div>
+
+    <% i=1 %>
+    <% @bestusers.each do |u| %>
+
+      <% if i==1 %>
+        <% if u.id != current_user.id %>
+          <div class="rank-div" style="border: 5px solid rgba(56,252,140, 1);">
+        <% elsif u.id == current_user.id %>
+          <div class="rank-div" style="border: 5px solid yellow;">
+        <% end %>
+            <div class="who">
+              <span class="ranking"><%= i %></span>
+              <%= image_tag u.avatar.url(:thumb), class: "circle-image"  %>
+              <span class="player-name" style="font-size: 1.1em;">
+                <strong><%= u.firstname %> <%= u.lastname %> </strong>
+              </span>
+            </div>
+            <div class="ranking-score">
+              <span class="score"><%= u.karma %></span>
+              <span class="emoji">✨</span>
+            </div>
+          </div>
+      <% elsif i==2 %>
+          <% if u.id != current_user.id %>
+          <div class="rank-div" style="border: 3px solid rgba(56,252,140, .6);">
+        <% elsif u.id == current_user.id %>
+          <div class="rank-div" style="border: 5px solid yellow;">
+        <% end %>
+            <div class="who">
+              <span class="ranking"><%= i %></span>
+              <%= image_tag u.avatar.url(:thumb), class: "circle-image"  %>
+              <span class="player-name">
+                <%= u.firstname %>
+                <%= u.lastname %>
+              </span>
+            </div>
+            <div class="ranking-score">
+              <span class="score"><%= u.karma %></span>
+              <span class="emoji">✨</span>
+            </div>
+          </div>
+      <% elsif i==3 %>
+
+          <% if u.id != current_user.id %>
+          <div class="rank-div" style="border: 3px solid rgba(56,252,140, .4);">
+        <% elsif u.id == current_user.id %>
+          <div class="rank-div" style="border: 5px solid yellow;">
+        <% end %>
+            <div class="who">
+              <span class="ranking"><%= i %></span>
+              <%= image_tag u.avatar.url(:thumb), class: "circle-image"  %>
+              <span class="player-name">
+                <%= u.firstname %>
+                <%= u.lastname %>
+              </span>
+            </div>
+            <div class="ranking-score">
+              <span class="score"><%= u.karma %></span>
+              <span class="emoji">✨</span>
+            </div>
+          </div>
+      <% else %>
+          <% if u.id != current_user.id %>
+          <div class="rank-div">
+        <% elsif u.id == current_user.id %>
+          <div class="rank-div" style="border: 5px solid yellow;">
+        <% end %>
+            <div class="who">
+              <span class="ranking"><%= i %></span>
+              <%= image_tag u.avatar.url(:thumb), class: "circle-image"  %>
+              <span class="player-name">
+                <%= u.firstname %>
+                <%= u.lastname %>
+              </span>
+            </div>
+            <div class="ranking-score">
+              <span class="score"><%= u.karma %></span>
+              <span class="emoji">✨</span>
+            </div>
+          </div>
+      <% end %>
+
+    <% i+=1 %>
+    <% end %>
+</div>

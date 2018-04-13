@@ -1,0 +1,110 @@
+@import "bootstrap";
+@import "board";
+@import "share";
+@import "confirmation";
+@import "registration";
+@import "match_index";
+@import "user_show";
+@import 'slick';
+@import 'slick-theme';
+@import 'carousel';
+@import 'user_ranking';
+@import 'match_show';
+
+
+body {
+    background-color: black;
+    display: flex;
+}
+
+#central-container {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* ACTION BUTTONS */
+
+.CTA_button {
+    background-color: #38FC8C;
+    font-family: "Kalam";
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 2px;
+    padding: 10px 50px;
+    border-radius: 2px;
+    margin: 30px 10px;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.CTA_button:hover a {
+    text-decoration: none;
+    color: black;
+}
+
+.container-confirmation {
+    a:hover {
+    text-decoration: none;
+    color: black;
+    }
+}
+
+
+.action_link a {
+    font-family: "Kalam";
+    font-size: 18px;
+    font-weight: bold;
+    color: #F2C94C;
+    text-decoration: none;
+    padding: 8px 40px;
+    letter-spacing: 2px;
+    margin: 20px 10px;
+}
+
+.action_link:hover a {
+    text-decoration: none;
+}
+
+.action-button {
+    border: 2px solid #38FC8C;
+    font-family: "Kalam";
+    font-size: 2em;
+    font-weight: bold;
+    color: #38FC8C;
+    letter-spacing: .05em;
+    text-align: center;
+    padding: 0.2em 1.2em;
+    &:hover {
+        background-color: #38FC8C;
+        font-weight: bold;
+        color: black !important;
+        text-decoration: none;
+    }
+}
+
+.action-button a {
+    text-decoration: none;
+    color: #38FC8C;
+    &:hover {
+        color: black !important;
+      }
+}
+
+
+/* TEXT */
+
+.user-name-display {
+    display: inline-flex;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.3em;
+}

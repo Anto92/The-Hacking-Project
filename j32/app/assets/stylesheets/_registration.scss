@@ -1,0 +1,112 @@
+// NEW & EDIT
+
+.container-registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  color:white;
+  .action-button {
+    margin-top: 20px;
+  }
+  .action-button:hover {
+    margin-top: 20px;
+  }
+  .CTA_button {
+    margin-bottom: 10px;
+  }
+
+}
+
+.container-registration h1 {
+  font-family: "Kalam";
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 50px;
+
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  writing-mode: lr-tb;
+}
+
+// TWO FORMS WITH JS
+
+#form_part1.form-active {
+  display: block;
+  width: 94%;
+  .action-button {
+    width: 94%;
+    margin: auto;
+    margin-top: 75px;
+  }
+}
+
+#form_part1.form-unactive {
+  display: none;
+}
+
+#form_part2.form-unactive {
+  display: none;
+}
+
+#form_part2.form-active {
+  display: block;
+}
+
+// CUSTOMIZING THE FIELDS
+
+.field {
+  padding-top: 20px;
+  background-color: black;
+  border-color: white;
+  :focus{
+    outline-color: #F2C94C;
+  }
+}
+
+.field1 {
+  border: 1px solid white;
+  background-color: inherit;
+  color: rgba(255, 255, 255, 0.5);
+  width: 94%;
+  font-family: "Open sans";
+  font-size: 14px;
+  padding: 10px;
+}
+
+.actions {
+  background-color: #38FC8C;
+  font-family: "Kalam";
+  font-size: 26px;
+  color: black;
+  letter-spacing: 2px;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin: 30px 10px;
+}
+
+input[type=submit] {
+  background-color: #38FC8C;
+  border-radius: 4px;
+  border-width: 0px;
+  font-weight: bold;
+}
+
+// EDIT
+
+.picture-edit{
+  img{
+    width: 100%;
+    border: 1px solid white;
+  }
+}
+
+// .white-text{
+//   font-family: "Open sans";
+//   font-size: 15px;
+//   color: rgba(255, 255, 255, 0.5);
+// }

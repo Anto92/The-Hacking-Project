@@ -1,0 +1,52 @@
+.container-ranking {
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.rank-div {
+    border: 1px solid white;
+    width: 100%;
+    min-width: 310px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    color: white;
+    justify-content: space-between;
+    padding: 10px 10px;
+    line-height: 100px;
+    .who {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .ranking {
+            font-size: 1.8em;
+            margin-right: 7px;
+        }
+        .player-name {
+            font-weight: 300;
+            max-width: 160px;
+            min-width: 160px;
+            word-wrap: break-word;
+        }
+        .circle-image {
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            border: 2px solid white;
+            margin: 5px;
+            margin-right: 10px;
+        }
+    }
+    .ranking-score {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.3em;
+
+        .emoji{
+            font-size: 1.3em;
+            margin-left: 5px;
+        }
+    }
+}

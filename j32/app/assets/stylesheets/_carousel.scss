@@ -1,0 +1,82 @@
+/* CAROUSEL */
+
+.container-big-carousel {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.scroller {
+  div {
+    text-align: center;
+    font-size: 24px;
+  }
+  h1 {
+    color: white;
+    font-size: 1em;
+    font-family: "Kalam";
+    font-size: 26px;
+  }
+  p {
+    color: #F2C94C;
+    font-size: 0.6em;
+    font-family: 'Open sans';
+    margin-top: 20px;
+    padding: 15px;
+    margin-bottom: 0;
+  }
+}
+
+.container-carousel {
+  .action_link {
+      font-family: "Kalam";
+      font-size: 18px;
+      font-weight: bold;
+      color: #F2C94C;
+      text-decoration: none;
+      letter-spacing: 2px;
+      margin: 15px 10px 20px 10px;
+      text-align: center;
+      width: 90%;
+  }
+  .CTA_button {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-size: 24px;
+  }
+}
+
+.container-carousel-top {
+  padding: 20px 20px;
+}
+
+.slick-prev::before, .slick-next::before {
+  color: white;
+}
+
+.slick-next {
+  right: -5px;
+}
+
+.slick-prev {
+  left: -5px;
+}
+
+.slick-dots li button:before {
+    color: white;
+    opacity: 0.7;
+  }
+
+.slick-dots li.slick-active button:before {
+   color: #38FC8C;
+   opacity: 1;
+  }
+
+.slick-slide img {
+  display: inline;
+  margin: 20px 0px;
+}
+.slick-track {
+  height: 100%;
+}

@@ -1,0 +1,124 @@
+.container-match-show {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 95%;
+}
+
+.container-match-show.candidate_1 {
+      cursor: pointer;
+      width: 100%;
+      margin: auto;
+      position: relative;
+      height: 300px;
+      background-color: black;
+      color: white;
+      .bio {
+          box-sizing: border-box;
+          position: absolute;
+          text-align: center;
+          border: 2px solid white;
+          background-color: black;
+          display: flex;
+          .bio-description {
+              width: 100%;
+              height: 100%;
+              padding: 1em;
+              padding-bottom: 3em;
+              overflow: hidden;
+              text-align: center;
+              font-style: italic;
+          }
+      }
+      .behind {
+          margin: 0; // a verifier
+          width: calc(100% - 10px);
+          height: calc(90% - 10px);
+          z-index: 0;
+      }
+      .picture {
+          position: absolute;
+          box-sizing: border-box;
+          border: 2px solid white;
+          background-color: black;
+          text-align: center;
+          overflow: hidden;
+          display: flex; // .picture is [display flex]
+          img {
+              object-fit: cover; // Pour centrer l'img dans son container, au centre + sans déformation
+              height: auto;
+              width: 100%;
+          }
+      }
+      .ahead {
+          width: calc(100% - 10px);
+          height: calc(90% - 10px);
+          margin: 8px 0 0 8px;
+          z-index: 1;
+      }
+}
+
+.container-match-show.candidate_2 {
+      cursor: pointer;
+      width: 100%;
+      margin: auto;
+      position: relative;
+      height: 300px;
+      background-color: black;
+      color: white;
+      .bio {
+          box-sizing: border-box;
+          position: absolute;
+          text-align: center;
+          border: 2px solid white;
+          background-color: black;
+          display: flex; // .bio_container is [display flex]
+          .bio-description {
+              width: 100%;
+              height: 100%;
+              padding: 1em;
+              padding-bottom: 3em;
+              overflow: hidden;
+              text-align: center;
+              font-style: italic;
+          }
+      }
+      .behind {
+          margin: 0; // a verifier
+          width: calc(100% - 10px);
+          height: calc(90% - 10px);
+          z-index: 0;
+      }
+      .picture {
+          position: absolute;
+          box-sizing: border-box;
+          border: 2px solid white;
+          background-color: black;
+          text-align: center;
+          overflow: hidden;
+          display: flex; // .picture is [display flex]
+          img {
+              object-fit: cover; // Pour centrer l'img dans son container, au centre + sans déformation
+              height: auto;
+              width: 100%;
+          }
+      }
+      .ahead {
+          width: calc(100% - 10px);
+          height: calc(90% - 10px);
+          margin: 8px 0 0 8px;
+          z-index: 1;
+      }
+}
+
+
+.middle-container-match-show {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.circle-image-show {
+  border-color: #F2C94C;
+  width: 70px;
+  height: 70px;
+}

@@ -1,0 +1,63 @@
+<div class="container container-registration">
+    <h1>Modifier mon profil</h1>
+
+    <div class="picture picture-edit">
+        <%= image_tag current_user.avatar.url(:thumb) %>
+    </div>
+
+    <!-- FORM BEGINNING -->
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+
+        <div class="field">
+            <%= f.file_field :avatar %>
+            <% if @user.avatar? %>
+            <% end %>
+        </div>
+        <br>
+
+        <div class="field">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class: "field1" %>
+        </div>
+
+        <div class="field">
+            <%= f.text_field :firstname, placeholder:"Prenom",class: "field1" %>
+        </div>
+
+        <div class="field">
+            <%= f.text_field :lastname, placeholder:"Nom de famille",class: "field1" %>
+        </div>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+
+        <div class="field">
+            <%= f.text_field :bio, autocomplete: "off", placeholder:"Présente toi en quelques mots",class: "field1" %>
+        </div>
+
+        <div class="field">
+            <%= f.password_field :current_password, autocomplete: "off", placeholder:"Mot de passe Actuel",class: "field1" %>
+        </div>
+
+        <div class="field">
+            <%= f.password_field :password, autocomplete: "off",placeholder:"New Password (6 chars min)",class: "field1" %>
+        </div>
+
+        <div class="field">
+            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:" New Password Confirmation",class: "field1" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sauvegarder" %>
+        </div>
+    <% end %>
+
+    <!-- <h3>Cancel my account</h3>
+
+    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
+    <div class= "action_link">
+    <%= link_to "Back", :back %>
+    </div>
+</div>

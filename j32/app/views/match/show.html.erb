@@ -1,0 +1,47 @@
+<div class="container container-match-show">
+    <!-- TOP CONTAINER -->
+    <div class= "candidate_1">
+      <div class="bio behind">
+        <p class="bio_description" id="click-frame-bio">
+          <span><%= @candidate_1.bio %></span>
+        </p>
+        <div class="action-bar">
+          <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
+        </div>
+      </div>
+      <div class="picture ahead">
+        <span><%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix" %></span>
+        <div class="action-bar">
+          <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class= "middle-container middle-container-match-show">
+        <%= link_to users_show_path(current_user), class: "child" do %>
+          <%= image_tag current_user.avatar.url(:thumb), class: "circle-image circle-image-show"  %>
+        <% end %>
+        <div class=" action_link">
+          <%= link_to "Retour", match_index_path %>
+        </div>
+    </div>
+
+    <!-- BOTTOM CONTAINER -->
+    <div class= "candidate_2">
+      <div class="bio behind">
+        <p class="bio_description" id="click-frame-bio">
+          <span><%= @candidate_2.bio %></span>
+        </p>
+        <div class="action-bar">
+          <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
+        </div>
+      </div>
+      <div class="picture ahead">
+        <span><%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid" %></span>
+        <div class="action-bar">
+          <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
+        </div>
+      </div>
+    </div>
+</div>

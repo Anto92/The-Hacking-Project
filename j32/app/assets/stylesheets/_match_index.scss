@@ -1,0 +1,145 @@
+.container-match-index {
+  margin-top: 20px;
+  i {
+    color: white;
+    font-size: 30px;
+    float: left;
+  }
+  h1 {
+    font-family: "Kalam";
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+}
+
+/* Style the tab */
+
+.tab-nav {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Style the buttons that are used to open the tab content */
+
+.tab-nav button {
+    width: 50%;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: 0.3s;
+    color: white;
+    // border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    i {
+        color: white;
+        opacity: 0.5;
+    }
+}
+
+/* Create an active/current tablink class */
+
+.tab-nav button.tab-nav-active {
+    background-color: black;
+    // border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #38FC8C;
+    color: white;
+    i {
+        opacity: 1;
+    }
+}
+
+/* Style the tab content - with the match lists */
+
+.tabcontent {
+    display: none;
+    padding: 6px 6px;
+    // border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s;
+}
+
+.tab-active {
+    display: block;
+    padding: 6px 0px;
+    // border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s;
+}
+
+/* Go from zero to full opacity */
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* TEXTS */
+
+.match-div {
+    border: 1px solid white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.match-div-img {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.match-div-1 {
+    width: 33%;
+}
+
+.match-div-2 {
+    width: 33%;
+    margin: auto;
+}
+
+.match-div-3 {
+    width: 33%;
+}
+
+.selected-name {
+    text-align: center;
+    color: white;
+    font-family: "Open sans";
+    font-size: 0.8em;
+    font-weight: lighter;
+    padding: 5px 0 0 0;
+}
+
+
+/* IMAGES */
+
+.match-div-img {
+    img {
+        height: 80px;
+        width: 80px;
+        margin: auto;
+    }
+    .image-self {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin: auto;
+        border-color: #F2C94C;
+        border-width: 2px;
+        border-style: solid;
+    }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Obviews</title>
+    <%= Gon::Base.render_data %>
+    <%= include_gon %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Kalam:400,700|Open+Sans:300,400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= favicon_link_tag asset_path('logo-obviews.png'), :rel => 'icon', :type =>  'image/png' %>
+  </head>
+
+  <body>
+    <div class="container" id="central-container">
+      <!-- <p class="notice">< % = notice ></p> -->
+      <!-- <p class="alert">< % = alert ></p> -->
+      <%= yield %>
+    </div>
+  </body>
+</html>
