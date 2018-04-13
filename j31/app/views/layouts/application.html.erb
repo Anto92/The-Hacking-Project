@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shirt Store</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container"><a href="index.html" class="navbar-brand"><%= image_tag("logo-chat.jpg")%></a>
+          <button type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-align-justify"></i></button>
+          <div id="navigation" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="active"><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="text-page.html" class="nav-link">Text Page</a></li>
+              <li><a href="#" class="nav-link">Shop</a></li>
+              <li><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link langs"><i class="icon-settings"></i></a>
+                <ul class="dropdown-menu" style='left: inherit'>
+                   <% if user_signed_in? %>
+                  <li><a><%= link_to "Log out", destroy_user_session_path, method: :delete %></a></li>
+
+                  <li><a><%= current_user.email %></a></li>
+                  <li><a><%= link_to "Edit", edit_user_registration_path %></a></li>
+                  <% else %>
+                  <li><a><%= link_to "Se connecter", new_user_session_path,  class: "nav-link" %></a></li>
+                   <li><a><%= link_to "S'inscrire", new_user_registration_path,  class: "nav-link" %></a></li>
+                  <% end %>
+
+                </ul>
+              </li>
+              <li><a href="cart-page.html" class="nav-link cart"><i class="icon-cart-1"></i><span class="items">1</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Navbar-->
+    <%= yield %>
+    <!-- Footer-->
+    <footer>
+      <div class="container">
+        <div class="contact-details text-center">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="icon"><i class="icon-marker"></i></div>
+              <div class="text">
+                <p>T-Shirt Store, Hasicska, <br>Ostrava, Czech republic</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="icon"><i class="icon-phone-1"></i></div>
+              <div class="text">
+                <p>(040)23233434545</p>
+                <p>(040)23233434545</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="icon"><i class="icon-mail-1"></i></div>
+              <div class="text">
+                <p><a href="mailto:support@shirtstore.com">Support@Shirtstore.com</a></p>
+                <p><a href="mailto:shirtstore@example.com">Shirtstore@example.com</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social text-center">
+          <ul class="social-list list-inline">
+            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
+          </ul>
+        </div>
+        <div class="site-links">
+          <div class="row">
+            <div class="col-lg-4 col-md-6"><%= image_tag("logo-chat.jpg", width:"180") %>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore.
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h4>This Template</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Text Page</a></li>
+                <li><a href="#">Shopping Cart</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <h4>Our Services</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Page Link</a></li>
+                <li><a href="#">Page Link</a></li>
+                <li><a href="#">Page Link</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h4>Newsletter</h4>
+              <p>Lorem ipsum amet, consectetur adipiscing elit</p>
+              <form id="newsletter-form" action="#">
+                <input id="usermail" type="email" name="useremail" placeholder="Enter Your Email">
+                <button type="submit">Subscribe <i class="fa fa-circle"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>© 2017 ShirtStore.com. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-right">
+              <p>Template By <a href="https://ondrejsvestka.cz/" target="_blank">Ondrej Svestka</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer-->
+
+  </body>
+</html>

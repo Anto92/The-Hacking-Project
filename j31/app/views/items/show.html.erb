@@ -1,0 +1,14 @@
+<section id="product-show" class="row align-items-center justify-content-center">
+    <div class="col-lg-8" align="center">
+      <div class="card mt-4">
+        <%= image_tag(@item.image_url, :class => "card-img-top img-fluid") %>
+        <div class="card-body">
+          <h3 class="card-title"><%= @item.title %></h3>
+          <h4><%= @item.price %> €</h4>
+          <p class="card-text"><%= @item.description %></p>
+        </div>
+      </div><a href="#" class="add-to-cart btn btn-primary"><i class="icon-cart-1"></i></a>
+
+      </div>
+    </div>
+</section>

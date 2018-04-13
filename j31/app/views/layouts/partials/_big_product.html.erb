@@ -1,0 +1,35 @@
+<!-- Big Product Section-->
+<section class="big-product">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 product"><%= image_tag("kitten1.jpg", :class => "img-fluid") %></div>
+      <div class="col-md-8 info">
+        <div class="info-wrapper">
+          <h2>Chaton blanc</h2>
+          <p class="lead">
+            Comment résister à ce chaton si mignon ? N'essaie pas, succombe et achète sa photo !
+          </p>
+          <ul class="product-info list-unstyled">
+            <li class="size">
+              <select title="Choose Your Size" class="selectpicker">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="x-large">X-Large</option>
+              </select>
+            </li>
+            <li class="size">
+              <div class="product-quantity">
+                <div class="minus-btn"><i class="icon-android-remove"></i></div>
+                <input type="text" value="1" class="quantity">
+                <div class="plus-btn"><i class="icon-android-add"></i></div>
+              </div>
+            </li>
+            <li class="price">70.00$</li>
+          </ul>
+        </div><a href="#" class="add-to-cart btn btn-primary">Ajouter au panier <i class="icon-cart-1"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Big Product Section-->

@@ -1,0 +1,52 @@
+ <!-- Cart section-->
+<!-- <section class="cart"> -->
+  <!-- Jumbo section-->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Mon Panier</h1>
+      <p class="lead">Mes chatons selectionnés :</p>
+    </div>
+  </div>
+  <!-- End Jumbo section-->
+
+<!-- ONE PRODUCT -->  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 product">
+        <img src="" alt="" class="img-fluid">
+        <h1> <%= User.find(current_user.id).email %></h1>
+        <h2> <%= User.find(current_user.id).id %></h2>
+      </div>
+      <div class="col-md-8 info">
+        <div class="info-wrapper">
+          <h2>items.desciption</h2>
+          <p class="lead">
+            Comment résister à ce chaton si mignon ?
+          </p>
+          <p class="price lead">items.price</p>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-secondary"><i class="icon-android-remove"></i></button>
+            <input type="text" value="1" class="quantity">
+            <button type="button" class="btn btn-outline-secondary"><i class="icon-android-add"></i></button>
+          </div>   
+          <a href="#" class="add-to-cart btn btn-danger">Retirer<i class="icon-cart-1"></i></a>
+        </div> <!-- end wrapper -->
+      </div>  <!-- end col-md-8 -->
+  </div> <!-- end Row -->
+</div>  <!-- END container -->
+<!-- END ONE PRODUCT -->
+
+  <div class="total-price text-center">
+    <div class="container">
+      <h3>Total:</h3>
+      <h2 class="text-primary">70.00$</h2>
+      <!-- Bouton order-->  
+      <button id="shipping-submit" type="submit" class="oder-now btn btn-succes btn-template btn-lg">A CHAT MEOW!<i class="icon-shipping-truck"></i></button><!-- end bouton -->
+    </div>
+  </div>
+<!-- </section> -->
+  
+
+<!-- Scroll to top button-->
+<div id="scrollTop"><i class="fa fa-angle-up"></i></div>
+<!-- End scroll to top button -->

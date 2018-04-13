@@ -1,0 +1,43 @@
+
+<div class="general">
+<div class="signup">
+
+
+
+<div class="right-column">
+  <div class="form">
+    <h2>Log in</h2>
+    <p> Time to log in! </p>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Your email", class: "field1" %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "off", placeholder:"Your password",class: "field3" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="field5">
+          <%= f.check_box :remember_me%>
+          <%= f.label "Remember me?", id: "checkbox"%>
+        </div>
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit "Log in",class: "field4" %>
+      </div>
+    <% end %>
+
+    <%= link_to 'Forgot your password?', new_user_password_path, class: "password" %> 
+
+</div>
+
+<%= link_to "Did not sign up yet?", new_user_registration_path, class: "login" %>
+
+
+</div>
+</div>
+

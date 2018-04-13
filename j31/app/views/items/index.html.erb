@@ -1,0 +1,35 @@
+<section class="album py-5 bg-light" id="all-products-section">
+    <div class="container">
+    <h2 class="heading-center">Tous nos produits</h2>
+
+        <div class="row">
+          <% @items.each do |i| %>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <%= link_to image_tag(i.image_url, :class => "card-img-top", height: '225px'), item_path(i)%>
+              <div class="card-body">
+                <p class="card-text"><%= link_to i.title, item_path(i)%></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <%= link_to item_path(i), :class => "btn btn-sm btn-outline-secondary", :method => :get do %>
+                      <i class="icon-expand"></i>
+                    <% end %>
+
+                    <%= button_to add_to_cart_path(i), :class => "btn btn-sm btn-outline-secondary", :method => :post do %>
+                      <i class="icon-cart-1"></i>
+                    <% end %>
+                    
+                  </div>
+                  <small class="text-muted"><%= i.price %>€</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <% end %>
+
+        </div>
+
+    <div>
+</section>
